@@ -11,6 +11,7 @@ function App() {
 		semester: '',
 		course: '',
 		code: '',
+		set: '1',
 		examType: 'Theory',
 	});
 	const [uploadedFiles, setUploadedFiles] = useState<any>([]);
@@ -56,6 +57,7 @@ function App() {
 				semester: '',
 				course: '',
 				code: '',
+				set: '1',
 				examType: 'Theory',
 			});
 			setFile('');
@@ -131,6 +133,18 @@ function App() {
 						setPaperInfo({ ...paperInfo, year: e.target.value });
 					}}
 					placeholder='Year (YYYY-YYYY)'
+					className='block p-2 bg-white border border-gray-500 focus:border-gray-800 text-black text-lg rounded-md max-w-xl w-full'
+				/>
+				<input
+					type='number'
+					value={paperInfo.set}
+					onChange={(e) => {
+						setPaperInfo({ ...paperInfo, set: e.target.value });
+					}}
+					defaultValue={1}
+					placeholder='Paper Set'
+					min={1}
+					max={10}
 					className='block p-2 bg-white border border-gray-500 focus:border-gray-800 text-black text-lg rounded-md max-w-xl w-full'
 				/>
 				<input
