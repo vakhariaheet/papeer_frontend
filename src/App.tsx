@@ -171,7 +171,7 @@ function App() {
 				/>
 				{file ? (
 					<div className='block p-2 bg-white border border-gray-500 focus:border-gray-800 text-black text-lg rounded-md max-w-xl w-full flex justify-between'>
-						<p>Hello:{file.name}</p>
+						<p>{file.name}</p>
 						<button onClick={() => setFile('')}>
 							<svg width={24} height={24} x={0} y={0} viewBox='0 0 512 512'>
 								<g>
