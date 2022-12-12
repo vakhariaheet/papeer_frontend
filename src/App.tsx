@@ -221,7 +221,9 @@ function App() {
 					Upload
 				</button>
 				<h3 className='text-4xl my-4'>Uploaded Files</h3>
-
+				{uploadedFiles.length === 0 && (
+					<p className='text-xl text-gray-400'>No files uploaded yet</p>
+				)}
 				{uploadedFiles.map((file: any) => (
 					<div className='block p-2 bg-white border border-gray-500 focus:border-gray-800 text-black text-lg rounded-md max-w-xl w-full flex justify-between'>
 						<p>{file.url.split('/')[file.url.split('/').length - 1]}</p>
