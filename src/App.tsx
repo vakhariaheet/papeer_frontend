@@ -125,14 +125,12 @@ function App() {
 					className='block p-2 bg-white border border-gray-500 focus:border-gray-800 text-black text-lg rounded-md max-w-xl w-full'
 				/>
 				<input
-					type='number'
+					type='text'
 					value={paperInfo.year}
 					onChange={(e) => {
 						setPaperInfo({ ...paperInfo, year: e.target.value });
 					}}
-					min={1}
-					max={4}
-					placeholder='Year'
+					placeholder='Year (YYYY-YYYY)'
 					className='block p-2 bg-white border border-gray-500 focus:border-gray-800 text-black text-lg rounded-md max-w-xl w-full'
 				/>
 				<input
