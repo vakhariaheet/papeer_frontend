@@ -24,6 +24,7 @@ function App() {
 			});
 	}, []);
 	const onUpload = async (e: any) => {
+		// @ts-ignore
 		fbq('track', 'Purchase', { currency: 'USD', value: 30.0 });
 		try {
 			const formData = new FormData();
