@@ -115,8 +115,16 @@ function App() {
 						setPaperInfo({ ...paperInfo, course: e.target.value });
 					}}
 					placeholder='Course Name'
+					list='course'
 					className='block p-2 bg-white border border-gray-500 focus:border-gray-800 text-black text-lg rounded-md max-w-xl w-full'
 				/>
+				<datalist id='course'>
+					<option value='iMScIT' />
+					<option value='iMCA' />
+					<option value='BBA' />
+					<option value='MBA' />
+				</datalist>
+
 				<input
 					type='text'
 					value={paperInfo.subject}
