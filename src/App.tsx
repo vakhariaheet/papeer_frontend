@@ -24,7 +24,7 @@ function App() {
 			});
 	}, []);
 	const onUpload = async (e: any) => {
-		fbq('track', 'Purchase', {currency: "USD", value: 30.00});
+		fbq('track', 'Purchase', { currency: 'USD', value: 30.0 });
 		try {
 			const formData = new FormData();
 			formData.append('file', file);
